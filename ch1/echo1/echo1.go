@@ -1,0 +1,18 @@
+// echo prints it's command-line arguments
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	var s, sep string
+	i := 1
+	for ; i < len(os.Args); i++ {
+		s += sep + os.Args[i]
+		sep = " "
+	}
+
+	fmt.Println(s)
+}
